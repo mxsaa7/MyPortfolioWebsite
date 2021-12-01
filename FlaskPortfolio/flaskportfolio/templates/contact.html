@@ -1,0 +1,103 @@
+{% extends 'layout.html'%}
+{% block content %}
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="max-width">
+        <h2 class="title">Contact Me</h2>
+        <div class="contact-content">
+            <div class="column left">
+                <div class="text">Get in Touch</div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium delectus vel saepe doloribus, quam quis. Alias numquam eos reiciendis aliquam!
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fa fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Ethan Garrick</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="info">
+                                <div class="head">City</div>
+                                <div class="sub-title">Minneapolis, MN 55378</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">ethan.garr2000@gmail.com</div>
+                            </div>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="column right">
+                <div class="text">Message Me</div>
+                <div class="content-section" >
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                            <div class="form-group">
+                                {{ form.email.label(class="form-control-label") }}
+                                {% if form.email.errors %}
+                                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.email(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.subject.label(class="form-control-label") }}
+                                {% if form.subject.errors %}
+                                    {{ form.subject(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.subject.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.subject(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.company.label(class="form-control-label") }}
+                                {% if form.company.errors %}
+                                    {{ form.company(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.company.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.company(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.message.label(class="form-control-label") }}
+                                {% if form.message.errors %}
+                                    {{ form.message(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.message.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.message(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            {{ form.submit(class="submit-btn")}}
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

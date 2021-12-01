@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content">
+            <div class="text-1">Hello, I am </div>
+            <div class="text-2">Ethan Garrick</div>
+            <div class="text-3">I am a <span class="typing">Developer</span></div>
+            <a href="{{url_for('contact')}}">Hire Me</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

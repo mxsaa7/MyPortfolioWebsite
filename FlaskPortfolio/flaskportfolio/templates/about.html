@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- About Me Section -->
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About Me</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src="{{ url_for('static', filename='picture.ethan.png') }}" alt="Ethan's Profile Picture" height="100" width="100">    
+        </div>
+        <div class="column right">
+            <div class="text">I'm Ethan and I am a <span class="typing-2">Software Developer</span></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste at numquam quam expedita similique beatae sequi rem, consequuntur error odit necessitatibus. Voluptate, ratione ipsam voluptatem natus a nobis quibusdam amet obcaecati corrupti eligendi minus excepturi rem et consequatur sapiente nesciunt laborum provident id unde. Est tenetur saepe id pariatur voluptatem!</p>
+            <a href="{{ url_for('static', filename='Ethan Garrick.docx') }}" download>Download CV</a>
+        </div>
+    </div>
+</div>
+</section>
+
+
+{% endblock %}
